@@ -1,10 +1,6 @@
+
 *, ::after, ::before {
     box-sizing: border-box;
-}
-
-:root {
-    --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(5%) sepia(69%) saturate(1497%) hue-rotate(228deg) brightness(95%) contrast(93%);
 }
 
 html {
