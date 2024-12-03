@@ -8,7 +8,14 @@
     @include abstracts.breakpoint(lg){
         width: 32px;
         gap: 10px;
+        margin-left: 40px;
     }
+
+    @include abstracts.breakpoint(sm){
+        margin-left: 0;
+        justify-content: center;
+    }
+
 
     & .logo__title {
         color: var(--text-color);
@@ -21,4 +28,13 @@
             line-height: 144.444%;
         }
     }
+
+    &__img {
+        width: 32px;
+        @include abstracts.breakpoint(sm){
+            width: 24px;
+        }
+    }
+    
+   
 }

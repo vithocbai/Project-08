@@ -13,10 +13,13 @@
 .top-bar {
     @extend %flexItemCenter;
     padding: 30px 0;
+
     @include abstracts.breakpoint(lg) {
         padding: 20px 0;
     }
+
     @include abstracts.breakpoint(sm) {
+        justify-content: space-between;
         padding: 16px 0;
     }
 
@@ -25,7 +28,7 @@
 
         @include abstracts.breakpoint(lg) {
             display: block;
-            margin-right: 39px;
+            
         }
     }
 }
@@ -59,6 +62,10 @@
 
 .top-act {
     margin-left: auto;
+    @include abstracts.breakpoint(sm) {
+        margin-left: 0;
+    }
+
     @extend %flexItemCenter;
     gap: 20px;
 
