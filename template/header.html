@@ -1,36 +1,82 @@
-<section class="top-bar">
-    <!-- Logo -->
-    <div class="logo">
-        <img src="./assets/icons/logo.svg" alt="" />
-        <h1 class="logo__title">grocerymart</h1>
-    </div>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul class="navbar__list">
-            <li>
-                <a href="" class="navbar__link">Departments</a>
+<div class="container">
+    <section class="top-bar">
+        <!-- Logo -->
+        <a href="./" class="logo">
+            <img src="./assets/icons/logo.svg" alt="" />
+            <h1 class="logo__title">grocerymart</h1>
+        </a>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li>
+                    <a href="" class="icon navbar__link"
+                        >Departments
+                        <img
+                            class="icon navbar__arrow"
+                            src="./assets/icons/arrow-down.svg"
+                            alt=""
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="icon navbar__link"
+                        >Grocery
+                        <img
+                            class="navbar__arrow"
+                            src="./assets/icons/arrow-down.svg"
+                            alt=""
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="icon navbar__link"
+                        >Beauty
+                        <img
+                            class="navbar__arrow"
+                            src="./assets/icons/arrow-down.svg"
+                            alt=""
+                    /></a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Action -->
+        <div class="top-act">
+            <div class="top-act__group top-act__group--single">
+                <button class="top-act__btn">
+                    <img
+                        src="./assets/icons/search.svg"
+                        alt=""
+                        class="icon top-act__icon"
+                    />
+                </button>
+            </div>
+            <div class="top-act__group">
+                <button class="top-act__btn">
+                    <img
+                        src="./assets/icons/heart.svg"
+                        alt=""
+                        class="icon top-act__icon"
+                    />
+                    <span class="top-act__title">03</span>
+                </button>
+                <div class="top-act__separate"></div>
+                <button class="top-act__btn">
+                    <img
+                        src="./assets/icons/buy.svg"
+                        alt=""
+                        class="icon top-act__icon"
+                    />
+                    <span class="top-act__title">$65.42</span>
+                </button>
+            </div>
+            <div class="top-act__user">
                 <img
-                    class="navbar__arrow"
-                    src="./assets/icons/arrow-down.svg"
+                    src="../assets/img/avatar.jpg"
                     alt=""
+                    class="top-act__avatar"
                 />
-            </li>
-            <li>
-                <a href="" class="navbar__link">Grocery</a>
-                <img
-                    class="navbar__arrow"
-                    src="./assets/icons/arrow-down.svg"
-                    alt=""
-                />
-            </li>
-            <li>
-                <a href="" class="navbar__link">Beauty</a>
-                <img
-                    class="navbar__arrow"
-                    src="./assets/icons/arrow-down.svg"
-                    alt=""
-                />
-            </li>
-        </ul>
-    </nav>
-</section>
+            </div>
+        </div>
+    </section>
+</div>
