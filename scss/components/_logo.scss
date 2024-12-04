@@ -11,9 +11,9 @@
         margin-left: 40px;
     }
 
-    @include abstracts.breakpoint(sm){
-        margin-left: 0;
+    @include abstracts.breakpoint(md){
         justify-content: center;
+        margin-left: 0;
     }
 
 

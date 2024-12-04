@@ -7,7 +7,9 @@ html {
     --header-bg-color: #eee;
     @include abstracts.breakpoint(lg){
         --header-bg-color: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.20);
     }
+
     --body-color: #F6F6F6;
     --top-act-group-bg: #fff;
     --top-act-group-shadow: rgba(237, 237, 246, 0.20);;
@@ -16,4 +18,6 @@ html {
     // Dropdown
     --dropdown-bg-color: #fff;
     --dropdown-shadow-color: rgba(200, 200, 200, 0.40);
+    --top-menu-border-color: #D2D1D6;
+    --menu-column-icon-color: brightness(0) saturate(100%) invert(10%) sepia(33%) saturate(834%) hue-rotate(210deg) brightness(97%) contrast(101%);;
 }

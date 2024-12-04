@@ -7,6 +7,9 @@
 
 .header {
     background-color: var(--header-bg-color);
+   @include abstracts.breakpoint(lg) {
+    box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+   }
 }
 
 /* Top Bar */
@@ -20,7 +23,7 @@
         padding: 20px 0;
     }
 
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         justify-content: space-between;
         padding: 16px 0;
     }
@@ -36,21 +39,15 @@
 }
 
 .navbar {
-    margin-left: 144px;
+    margin-left: 130px;
     @include abstracts.breakpoint(xl) {
-        margin-left: 50px;
+        margin-left: 36px;
     }
     @include abstracts.breakpoint(lg) {
         display: none;
     }
 
     &__item {
-        &:first-child a {
-            padding-left: 0;
-        }
-        &:last-child a {
-            padding-right: 0;
-        }
         &:hover .dropdown{
             display: block;
         }
@@ -79,7 +76,7 @@
 
 .top-act {
     margin-left: auto;
-    @include abstracts.breakpoint(sm) {
+    @include abstracts.breakpoint(md) {
         margin-left: 0;
     }
 
