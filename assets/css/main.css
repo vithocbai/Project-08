@@ -1320,6 +1320,7 @@ html {
 }
 
 .dropdown {
+  display: none;
   width: min(1240px, 100%);
   position: absolute;
   left: 0;
@@ -1397,10 +1398,10 @@ html {
 .menu-column__list {
   margin-top: 19px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item:hover > .menu-column__link, .menu-column--active > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
 }
@@ -1413,7 +1414,7 @@ html {
 }
 
 .sub-menu {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--inner-padding);
   position: absolute;

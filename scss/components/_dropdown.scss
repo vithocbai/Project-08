@@ -1,7 +1,7 @@
 @use "../abstracts";
 
 .dropdown {
-    // display: none;
+    display: none;
     width: min(1240px, 100%);
     position: absolute;
     left: 0;
@@ -86,12 +86,13 @@
     }
 
     &__item {
-        &:hover .sub-menu {
+        &--active .sub-menu {
             display: grid;
         }
     }
 
-    &__item:hover > &__link {
+    &__item:hover > &__link,
+    &--active > &__link {
         color: #0071dc;
         font-weight: 500;
     }
@@ -106,7 +107,7 @@
 }
 
 .sub-menu {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--inner-padding);
     position: absolute;
