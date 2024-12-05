@@ -1328,6 +1328,7 @@ html {
 }
 .dropdown__inner {
   --inner-padding: 30px;
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
   padding: var(--inner-padding);
   background-color: var(--dropdown-bg-color);
@@ -1349,7 +1350,7 @@ html {
 .top-menu__main {
   --main-column-width: 292px;
   width: var(--main-column-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1421,6 +1422,14 @@ html {
   inset: 0 0 0 var(--main-column-width);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  display: grid;
+  position: inherit;
+  inset: inherit;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 0;
+  height: var(--max-inner-height);
 }
 
 /*# sourceMappingURL=main.css.map */
