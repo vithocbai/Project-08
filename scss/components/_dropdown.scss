@@ -5,10 +5,8 @@
     left: 0;
     padding-top: 54px;
     &__inner {
-        --inner-max-height: min(582px, 100vh - 158px);
         --inner-padding: 30px;
         position: relative;
-        max-height: var(--inner-max-height);
         padding: var(--inner-padding);
         background-color: var(--dropdown-bg-color);
         box-shadow: 0px 40px 90px 20px var(--dropdown-shadow-color);
@@ -26,10 +24,11 @@
 }
 
 .top-menu {
-    max-height: calc(var(--inner-max-height) - var(--inner-padding) * 2);
+   position: relative;
     &__main {
-        width: 292px;
-        max-height: inherit;
+    --main-column-width: 292px;
+        width: var(--main-column-width);
+        height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
     }
@@ -38,6 +37,9 @@
 .menu-column {
     display: flex;
     gap: 14px;
+    + .menu-column {
+        margin-top: var(--inner-padding);
+    }
 
     &__icon {
         flex-shrink: 0;
@@ -69,12 +71,23 @@
     &__heading {
         margin-top: 4px;
         font-size: 1.6rem;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 150%;
     }
 
     &__list {
         margin-top: 19px;
+    }
+
+    &__item {
+        &:hover .sub-menu {
+            display: grid;
+        }
+    }
+
+    &__item:hover  > &__link {
+        color: #0071dc;
+        font-weight: 500;
     }
 
     &__link {
@@ -84,9 +97,16 @@
         font-weight: 400;
         line-height: 142.857%;
 
-        &:hover {
-            color: #0071dc;
-            font-weight: 500;
-        }
+       
     }
+}
+
+.sub-menu {
+    display: none;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--inner-padding);
+    position: absolute;
+    inset: 0 0 0 var(--main-column-width);
+    padding-left: var(--inner-padding);
+    overflow-y: auto;
 }
